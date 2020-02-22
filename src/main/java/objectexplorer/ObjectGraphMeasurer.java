@@ -139,6 +139,7 @@ public class ObjectGraphMeasurer {
       this.predicate = predicate;
     }
 
+    @Override
     public Traversal visit(Chain chain) {
       if (chain.isPrimitive()) {
         Class<?> element = chain.getValueType();
@@ -164,6 +165,7 @@ public class ObjectGraphMeasurer {
       return Traversal.SKIP;
     }
 
+    @Override
     public Footprint result() {
       return new Footprint(objects, references, Collections.unmodifiableMap(primitives));
     }

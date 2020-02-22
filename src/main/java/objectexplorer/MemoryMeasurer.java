@@ -78,6 +78,7 @@ public class MemoryMeasurer {
       this.predicate = predicate;
     }
 
+    @Override
     public Traversal visit(Chain chain) {
       if (predicate.test(chain)) {
         Object o = chain.getValue();
@@ -90,6 +91,7 @@ public class MemoryMeasurer {
       return Traversal.SKIP;
     }
 
+    @Override
     public Long result() {
       return memory;
     }

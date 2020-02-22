@@ -147,6 +147,7 @@ public class ObjectExplorer {
     private final Set<Object> interner =
         Collections.newSetFromMap(new IdentityHashMap<Object, Boolean>());
 
+    @Override
     public boolean test(Chain chain) {
       Object o = chain.getValue();
       return o instanceof Class<?> || interner.add(o);
