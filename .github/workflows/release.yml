@@ -23,3 +23,5 @@ jobs:
           gpg_private_key: ${{ secrets.gpg_private_key }}
           nexus_username: ${{ secrets.nexus_username }}
           nexus_password: ${{ secrets.nexus_password }}
+          maven_goals_phases: 'clean compile deploy'
+          maven_args: '--activate-profiles sonatype-oss-release'
