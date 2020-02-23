@@ -18,10 +18,11 @@ jobs:
           java-version: 11
 
       - name: Release Maven package
-        uses: samuelmeuli/action-maven-publish@v1
+        uses: samuelmeuli/action-maven-publish@v1.3.2
         with:
           gpg_private_key: ${{ secrets.gpg_private_key }}
           gpg_passphrase: ${{ secrets.gpg_passphrase }}
           nexus_username: ${{ secrets.nexus_username }}
           nexus_password: ${{ secrets.nexus_password }}
-          maven_goals_phases: 'clean compile deploy --activate-profiles sonatype-oss-release'
+          maven_goals_phases: 'clean compile deploy'
+          maven_args: '--activate-profiles sonatype-oss-release -X'
