@@ -14,25 +14,6 @@
 		<java.version>11</java.version>
 	</properties>
 
-	<scm>
-		<url>https://github.com/MariusVolkhart/memory-measurer</url>
-		<connection>scm:git:https://github.com/MariusVolkhart/memory-measurer.git</connection>
-		<developerConnection>scm:git:git@github.com:MariusVolkhart/memory-measurer.git</developerConnection>
-		<tag>HEAD</tag>
-	</scm>
-
-	<issueManagement>
-		<system>GitHub Issues</system>
-		<url>https://github.com/MariusVolkhart/memory-measurer/issues</url>
-	</issueManagement>
-
-	<licenses>
-		<license>
-			<name>Apache 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-		</license>
-	</licenses>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.jetbrains</groupId>
@@ -54,13 +35,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<build>
 		<pluginManagement>
@@ -157,4 +131,38 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<scm>
+		<url>https://github.com/MariusVolkhart/memory-measurer</url>
+		<connection>scm:git:https://github.com/MariusVolkhart/memory-measurer.git</connection>
+		<developerConnection>scm:git:git@github.com:MariusVolkhart/memory-measurer.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/MariusVolkhart/memory-measurer/issues</url>
+	</issueManagement>
+
+	<licenses>
+		<license>
+			<name>Apache 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>mariusvolkhart</id>
+			<name>Marius Volkhart</name>
+			<email>marius@volkhart.com</email>
+		</developer>
+	</developers>
 </project>
